@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+def path = project.projectDir
+
+println 'path = ' + path + '\\app\\libs\\framework.jar'
+
+buildscript {
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+
+    //用这个jar包编译，主要是调用了系统隐藏的接口
+    tasks.withType(JavaCompile) {
+        options.compilerArgs.add('-Xbootclasspath/p:' + path + '\\app\\libs\\framework.jar')
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

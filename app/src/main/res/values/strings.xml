@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sink端</string>
+    <string name="p2p_device_name">Wifi_Sink_Test</string>
+</resources>

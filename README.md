@@ -1,0 +1,2 @@
+# WifiDisplaySink
+Java实现sink端代码，需要系统签名，用到了framework中隐藏的接口，使用MediaCodec实现音视频解码
