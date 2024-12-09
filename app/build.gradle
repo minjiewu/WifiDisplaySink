@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "com.autoai.display_sink"
+        applicationId "com.a.display_sink"
         minSdkVersion 26
         targetSdkVersion 27
         versionCode 1
@@ -29,16 +29,16 @@ android {
     signingConfigs {
         releaseConfig {
             keyAlias 'dev'
-            keyPassword 'autoai123'
-            storeFile file('debug.keystore')//签名文件路径
-            storePassword 'autoai123'
+            keyPassword 'dev'
+            storeFile file('a.keystore')//签名文件路径
+            storePassword 'dev'
         }
 
         debugConfig {
             keyAlias 'dev'
-            keyPassword 'autoai123'
-            storeFile file('debug.keystore')//签名文件路径
-            storePassword 'autoai123'
+            keyPassword 'dev'
+            storeFile file('a.keystore')//签名文件路径
+            storePassword 'dev'
         }
     }
 
@@ -67,7 +67,7 @@ android {
 
 dependencies {
 
-    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:27.1.1'
     testImplementation 'junit:junit:4.13.2'

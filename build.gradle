@@ -1,8 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 def path = project.projectDir
 
-println 'path = ' + path + '\\app\\libs\\framework.jar'
-
 buildscript {
 
     repositories {
