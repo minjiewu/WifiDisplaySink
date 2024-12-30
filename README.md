@@ -1,3 +1,2 @@
 # WifiDisplaySink
-Java实现sink端代码，需要系统签名，用到了framework中隐藏的接口，使用MediaCodec实现音视频解码，
-目前存在的问题，播放时间长了音视频不同步，还会出现偶发的花屏，音视频编解码还是用FFmpeg实现比较好。
+Java实现sink端代码，使用MediaCodec实现音视频解码。
